@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="142dp"
+        android:layout_height="67dp"
+        android:text="Iniciar Partida"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        app:srcCompat="@android:color/holo_red_dark"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        app:srcCompat="@android:color/holo_blue_dark"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        app:srcCompat="@android:color/holo_green_light"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        app:srcCompat="?android:attr/colorPressedHighlight"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+</android.support.constraint.ConstraintLayout>
