@@ -8,42 +8,77 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="142dp"
-        android:layout_height="67dp"
+        android:layout_width="138dp"
+        android:layout_height="96dp"
         android:text="Iniciar Partida"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="103dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146"
+        android:onClick=""/>
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="125dp"
         android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.16"
         app:srcCompat="@android:color/holo_red_dark"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="235dp" />
+        />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="125dp"
         android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/imageButton6"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintVertical_bias="0.234"
         app:srcCompat="@android:color/holo_blue_dark"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="405dp" />
+        />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="125dp"
         android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.16"
         app:srcCompat="@android:color/holo_green_light"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="235dp" />
+        />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="125dp"
         android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="0.234"
         app:srcCompat="?android:attr/colorPressedHighlight"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="405dp" />
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="268dp"
+        android:layout_height="62dp"
+        android:text="Puntuacion"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="598dp" />
 
 </android.support.constraint.ConstraintLayout>
