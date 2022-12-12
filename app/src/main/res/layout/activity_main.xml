@@ -7,26 +7,88 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="138dp"
-        android:layout_height="96dp"
+        android:id="@+id/start"
+        android:layout_width="177dp"
+        android:layout_height="89dp"
         android:text="Iniciar Partida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.817" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="273dp"
-        android:layout_height="212dp"
+        android:layout_width="401dp"
+        android:layout_height="132dp"
         android:text="Simon Dice"
         android:textAlignment="center"
         android:textSize="60sp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="67dp" />
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <ImageButton
+        android:id="@+id/red"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="408dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.16"
+        app:srcCompat="@android:color/holo_red_dark" />
+
+    <ImageButton
+        android:id="@+id/blue"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="264dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:color/holo_blue_dark" />
+
+    <ImageButton
+        android:id="@+id/green"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="408dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:srcCompat="@android:color/holo_green_light" />
+
+    <ImageButton
+        android:id="@+id/yellow"
+        android:layout_width="125dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="264dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="?android:attr/colorPressedHighlight" />
+
+    <TextView
+        android:id="@+id/puntuacion"
+        android:layout_width="308dp"
+        android:layout_height="86dp"
+        android:text="Puntuación"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="629dp" />
+
+    <TextView
+        android:id="@+id/record"
+        android:layout_width="67dp"
+        android:layout_height="45dp"
+        android:text="Record"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="556dp" />
 
 
 </android.support.constraint.ConstraintLayout>
