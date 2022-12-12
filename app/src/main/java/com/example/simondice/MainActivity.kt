@@ -84,13 +84,26 @@ private fun iniciar(){
 
             val Button_red : ImageButton = findViewById(R.id.red)
             val Button_yellow : ImageButton = findViewById(R.id.yellow)
-            val Button_bue : ImageButton = findViewById(R.id.blue)
+            val Button_blue : ImageButton = findViewById(R.id.blue)
             val Button_green : ImageButton = findViewById(R.id.green)
 
             when (secuencia[i]){
-
+                amarillo -> Button_yellow.setImageResource(R.mipmap.ic_launcher)
+                azul -> Button_blue.setImageResource(R.mipmap.ic_launcher)
+                verde -> Button_green.setImageResource(R.mipmap.ic_launcher)
+                else -> {
+                    Button_red.setImageResource(R.mipmap.ic_launcher)
+                }
             }
+            delay(500L)
+            Button_red.setImageResource(R.mipmap.ic_launcher)
+            Button_yellow.setImageResource(R.mipmap.ic_launcher)
+            Button_blue.setImageResource(R.mipmap.ic_launcher)
+            Button_green.setImageResource(R.mipmap.ic_launcher)
 
+            Log.d("JUEGO","El color nuevo se esta visualizando al jugador")
+
+            i++
 
 
         }
