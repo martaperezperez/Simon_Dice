@@ -10,6 +10,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 import java.util.*
 import kotlin.collections.ArrayList
@@ -45,7 +46,7 @@ private fun iniciar(){
     var secuencia : ArrayList<Int> = arrayListOf()
 
 }
-    private fun secuencias(){
+    private fun secuencia(){
         lateinit var secuencia: ArrayList<Int>
         var contador = 0
         var ronda = 1
@@ -77,20 +78,20 @@ private fun iniciar(){
     private fun mostrarColor(secuencia:ArrayList<Int>){
         var i=0
         var corutina: Job? = null
-        corutina = GlobalScope.launch(Dispatchers.Main)
+        corutina = GlobalScope.launch(Dispatchers.Main){
+            while(i< secuencia.size){
+                Log.d("JUEGO","Coroutina" +corutina.toString())
 
-        while(i< secuencia.size){
-            Log.d("JUEGO","Coroutina" +corutina.toString())
+                val Button_red : ImageButton = findViewById(R.id.red)
+                val Button_yellow : ImageButton = findViewById(R.id.yellow)
+                val Button_blue : ImageButton = findViewById(R.id.blue)
+                val Button_green : ImageButton = findViewById(R.id.green)
 
-            val Button_red : ImageButton = findViewById(R.id.red)
-            val Button_yellow : ImageButton = findViewById(R.id.yellow)
-            val Button_blue : ImageButton = findViewById(R.id.blue)
-            val Button_green : ImageButton = findViewById(R.id.green)
-
+                delay(500L)
             when (secuencia[i]){
-                amarillo -> Button_yellow.setImageResource(R.mipmap.ic_launcher)
-                azul -> Button_blue.setImageResource(R.mipmap.ic_launcher)
-                verde -> Button_green.setImageResource(R.mipmap.ic_launcher)
+                1 -> Button_yellow.setImageResource(R.mipmap.ic_launcher)
+                2 -> Button_blue.setImageResource(R.mipmap.ic_launcher)
+                3 -> Button_green.setImageResource(R.mipmap.ic_launcher)
                 else -> {
                     Button_red.setImageResource(R.mipmap.ic_launcher)
                 }
@@ -102,13 +103,29 @@ private fun iniciar(){
             Button_green.setImageResource(R.mipmap.ic_launcher)
 
             Log.d("JUEGO","El color nuevo se esta visualizando al jugador")
-
             i++
-
+        }
+    }
+    val toast = Toast.makeText(applicationContext,"Pulsa",Toast.LENGTH_LONG)
+    toast.show()
+    }
+    private fun compruebar(color: Int) {
+        if(contador == secuencia.size) {
+            val rondaSum = ronda + 1
+            val rondaText: TextView = findViewById(R.id.puntuacion)
+            rondaText.text = "Round : $rondaSum"
 
         }
+        return if (color == secuencia[contador -1]){
+            ronda ++
 
+            miModelo.añadirRonda(ronda)
+            miModelo.livedata_ronda.observe(
 
+            )
+        }
     }
 
+
 }
+
